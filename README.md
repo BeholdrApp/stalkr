@@ -42,4 +42,4 @@ version skew and the wire contract between them are tracked in
 
 ## License
 
-All rights reserved. See [LICENSE](LICENSE).
+Released under the [MIT License](LICENSE).
