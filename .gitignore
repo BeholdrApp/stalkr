@@ -1,0 +1,23 @@
+# Binaries
+/bin/
+/dist/
+*.exe
+*.test
+*.out
+
+# Go
+vendor/
+go.work
+go.work.sum
+
+# Local config and secrets
+*.local.yaml
+.env
+kubeconfig
+*.kubeconfig
+
+# Editors
+.idea/
+.vscode/
+*.swp
+.DS_Store
