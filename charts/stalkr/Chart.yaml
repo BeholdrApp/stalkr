@@ -1,0 +1,6 @@
+apiVersion: v2
+name: stalkr
+description: Read-only, egress-only Kubernetes OTLP observer
+type: application
+version: 0.1.0
+appVersion: 0.1.0-preview.1
