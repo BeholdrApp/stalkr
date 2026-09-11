@@ -27,12 +27,23 @@ Everything that ships to the Beholdr management cluster lives in the
 - **N=1 is a supported topology.** A single cluster running both `stalkr` and
   the control plane is the same code path as a fleet, with a different chart.
 
-## Status
+## Run the preview
 
-Early. The collection logic currently lives in the Beholdr monorepo under
-`internal/collect` and `internal/k8s` and is being extracted here. See the
-[issues](https://github.com/BeholdrApp/stalkr/issues) and the
-[Beholdr roadmap](https://github.com/BeholdrApp/Beholdr/blob/main/ROADMAP.md).
+The observer, Kubernetes source and tests now live here. `stalkr` exports
+standard OTLP/HTTP Kubernetes metrics, with bounded pending work and explicit
+synthetic demo inputs. Beholdr imports the extracted collector; chart history
+stays in the control plane.
+
+```sh
+go test ./...
+go run ./cmd/stalkr -demo -once
+```
+
+The demo command needs a loopback OTLP receiver. Use the complete
+[agents demo](https://github.com/BeholdrApp/Beholdr/blob/main/docs/agents-demo.md)
+to start every component and inspect results in Beholdr. See
+[development and delivery status](docs/development.md) for configuration,
+exported coverage and remaining release work.
 
 ## Compatibility
 

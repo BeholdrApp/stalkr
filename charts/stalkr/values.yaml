@@ -1,0 +1,17 @@
+clusterName: ""
+image:
+  repository: ghcr.io/beholdrapp/stalkr
+  tag: 0.1.0-preview.1
+  pullPolicy: IfNotPresent
+otlpEndpoint: http://gaze:4318
+interval: 15s
+resources:
+  requests:
+    cpu: 100m
+    memory: 128Mi
+  limits:
+    cpu: "1"
+    memory: 512Mi
+# Reference a Secret containing standard OTEL_EXPORTER_OTLP_* variables for
+# credentials/certificates. Never put credential values in values.yaml.
+extraEnvFrom: []
